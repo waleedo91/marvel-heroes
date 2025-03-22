@@ -1,0 +1,13 @@
+.footer {
+  background-color: red;
+}
+
+.marvel-footer {
+  height: 10vh;
+  width: 200px;
+}
+
+.copy-right {
+  color: white;
+  font-size: 30px;
+}
