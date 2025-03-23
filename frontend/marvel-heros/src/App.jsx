@@ -11,14 +11,15 @@ import Footer from "./Components/footer/Footer";
 // styling
 import "./App.css";
 
-// TODO: Change placement of components for Tablets and Monitors once mobile is finished. 
+// TODO: Change placement of components for Tablets and Monitors once mobile is finished.
 
 function App() {
   return (
     <>
       <Navigation />
-      {/* <Routes></Routes> */}
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
       <Footer />
     </>
   );
