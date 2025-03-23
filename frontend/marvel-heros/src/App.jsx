@@ -11,6 +11,8 @@ import Footer from "./Components/footer/Footer";
 // styling
 import "./App.css";
 
+// TODO: Change placement of components for Tablets and Monitors once mobile is finished. 
+
 function App() {
   return (
     <>

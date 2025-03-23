@@ -1,7 +1,6 @@
 .home-container {
-  height: 40vh;
-  position: absolute;
+  height: 88.5vh;
+  position: relative;
   width: 100%;
-  top: 137px;
-  
+  /* top: 130px; */
 }
