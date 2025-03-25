@@ -7,6 +7,9 @@ import Home from "./Pages/home/Home";
 // Components
 import Navigation from "./Components/navigation/Navigation";
 import Footer from "./Components/footer/Footer";
+import Characters from "./Pages/characters/Characters";
+import CharacterPage from "./Pages/characterPage/CharacterPage";
+import NewCharacter from "./Pages/newCharacter/NewCharacter";
 
 // styling
 import "./App.css";
@@ -19,6 +22,9 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/characters" element={<Characters />} />
+        <Route path="/characters/:id" element={<CharacterPage />} />
+        <Route path="/characters/add_character" element={<NewCharacter />} />
       </Routes>
       <Footer />
     </>
