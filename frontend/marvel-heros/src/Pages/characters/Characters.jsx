@@ -1,10 +1,12 @@
-import { useGetAllCharactersQuery } from "../../Utils/redux/service/marvelsData";
+// Components
+import CharacterList from "../../Components/characterList/CharacterList";
 
 const Characters = () => {
-  const res = useGetAllCharactersQuery();
-  console.log(res);
-
-  return <div>Characters</div>;
+  return (
+    <div>
+      <CharacterList />
+    </div>
+  );
 };
 
 export default Characters;

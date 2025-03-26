@@ -1,3 +1,6 @@
+// Components
+import { Link } from "react-router-dom";
+
 // Styling
 import "./Slider.css";
 import { Carousel, Button } from "react-bootstrap";
@@ -22,7 +25,9 @@ function Slider() {
               information you need to understand your favorite heroes and the
               worse villains. Welcome to the Marvel's Initiative
             </p>
-            <Button variant="warning">Check the Roster</Button>
+            <Link to="/characters">
+              <Button variant="warning">Check the Roster</Button>
+            </Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="carousel-item slide-2">
