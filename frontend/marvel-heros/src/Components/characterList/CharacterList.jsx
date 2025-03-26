@@ -2,9 +2,12 @@
 import { useGetAllCharactersQuery } from "../../Utils/redux/service/marvelsData";
 import { Link } from "react-router-dom";
 
+// Components
+import Loading from "../loading/Loading";
+
 // Styling
 import "./CharacterList.css";
-import { Spinner, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 const CharacterList = () => {
   const { data, error, isLoading } = useGetAllCharactersQuery();
@@ -18,8 +21,8 @@ const CharacterList = () => {
       {!isLoading ? (
         <div className="character-list-container">
           {data?.map((char) => (
-            <Card className="character-list-card">
-              <Link to={`/character/${char.id}`}>
+            <Card key={char.id} className="character-list-card">
+              <Link to={`/characters/${char.id}`}>
                 <Card.Img
                   variant="top"
                   src={char.image_url}
@@ -34,9 +37,7 @@ const CharacterList = () => {
           ))}
         </div>
       ) : (
-        <Spinner animation="border" variant="warning" role="status">
-          <span>Heroes Assembling!</span>
-        </Spinner>
+        <Loading />
       )}
     </>
   );

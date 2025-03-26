@@ -1,17 +1,16 @@
-.character-list-container {
+.villain-list-container {
   position: relative;
-  padding-top: 125px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.character-list-card {
-  flex-basis: 40%;
+.villain-list-card {
+  flex-basis: 50%;
   flex-grow: 1;
   text-align: center;
 }
 
-.character-list-image {
+.villain-list-image {
   width: 25%;
   height: 10em;
 }

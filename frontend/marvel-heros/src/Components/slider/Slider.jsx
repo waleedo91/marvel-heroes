@@ -39,7 +39,9 @@ function Slider() {
               worlds mightiest! Have someone in mind and their not on the list,
               make sure to add them to the roster!
             </p>
-            <Button variant="warning">The Heroes</Button>
+            <Link to="/heroes">
+              <Button variant="warning">The Heroes</Button>
+            </Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="carousel-item slide-3">
@@ -52,7 +54,9 @@ function Slider() {
               character or even update the character to make an attempt to prove
               to the world that they are misunderstood!{" "}
             </p>
-            <Button variant="warning">The Villains</Button>
+            <Link to="/villains">
+              <Button variant="warning">The Villains</Button>
+            </Link>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

@@ -1,17 +1,16 @@
-.character-list-container {
+.hero-list-container {
   position: relative;
-  padding-top: 125px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.character-list-card {
-  flex-basis: 40%;
+.hero-list-card {
+  flex-basis: 50%;
   flex-grow: 1;
   text-align: center;
 }
 
-.character-list-image {
+.hero-list-image {
   width: 25%;
   height: 10em;
 }

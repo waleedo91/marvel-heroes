@@ -11,6 +11,7 @@ import Footer from "./Components/footer/Footer";
 import Characters from "./Pages/characters/Characters";
 import CharacterPage from "./Pages/characterPage/CharacterPage";
 import NewCharacter from "./Pages/newCharacter/NewCharacter";
+import AlignmentList from "./Pages/alignmentList/AlignmentList";
 
 // styling
 import "./App.css";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/characters" element={<Characters />} />
         <Route path="/characters/:id" element={<CharacterPage />} />
         <Route path="/characters/add_character" element={<NewCharacter />} />
+        <Route path="/:alignment" element={<AlignmentList />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
