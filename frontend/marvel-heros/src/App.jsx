@@ -17,6 +17,9 @@ import AlignmentList from "./Pages/alignmentList/AlignmentList";
 import "./App.css";
 
 // TODO: Change placement of components for Tablets and Monitors once mobile is finished.
+// TODO: Add Buttons to edit character or delete character
+// TODO: Create function to for search component to be able to search for characters.
+// TODO: Create a form for when a user clicks the edit button. Make sure that the inputs are prefilled with the current information.
 
 function App() {
   return (

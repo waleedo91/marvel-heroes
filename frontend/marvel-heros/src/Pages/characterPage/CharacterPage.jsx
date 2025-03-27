@@ -1,11 +1,13 @@
-//  TODO: Use Params will work fine here to fetch the correct character information.
-import { useParams } from "react-router-dom";
+// Styling
+import "./CharacterPage.css";
+import CharacterInfo from "../../Components/characterInfo/CharacterInfo";
 
 const CharacterPage = () => {
-  const { id } = useParams();
-  console.log(id);
-
-  return <div>Hello world</div>;
+  return (
+    <div>
+      <CharacterInfo />
+    </div>
+  );
 };
 
 export default CharacterPage;

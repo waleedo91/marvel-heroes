@@ -1,0 +1,16 @@
+.single-character-container {
+  padding-top: 110px;
+  padding-bottom: 30px;
+}
+
+.hero-image {
+  height: 35vh;
+}
+
+.hero-photo-card {
+  margin: 0 auto;
+  text-align: center;
+  border: 3px solid black !important;
+  padding: 20px;
+  width: 75%;
+}
