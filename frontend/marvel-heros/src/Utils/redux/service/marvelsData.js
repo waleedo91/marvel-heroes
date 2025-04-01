@@ -19,7 +19,7 @@ export const charactersApi = createApi({
       }),
     }),
     updateCharacter: builder.mutation({
-      query: ({ id, updatedCharacter }) => ({
+      query: ({ id, ...updatedCharacter }) => ({
         url: `/characters/${id}`,
         method: "PUT",
         headers: { "Content-Type": "application/json" },

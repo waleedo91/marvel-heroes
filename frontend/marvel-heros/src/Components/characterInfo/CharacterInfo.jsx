@@ -1,14 +1,10 @@
 // UTILS
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useGetCharactersByIdQuery } from "../../Utils/redux/service/marvelsData";
 
-// Components
-import EditButton from "../editButton/EditButton";
-
 // Styling
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import "./CharacterInfo.css";
-import DeleteButton from "../deleteButton/DeleteButton";
 
 const CharacterInfo = () => {
   const { id } = useParams();
@@ -46,8 +42,10 @@ const CharacterInfo = () => {
         </Card>
       </div>
       <div className="button-section">
-        <EditButton />
-        <DeleteButton />
+        <Link to={`/characters/edit-form/${id}`}>
+          <Button className="edit-button">Edit</Button>
+        </Link>
+        <Button variant="danger">Delete</Button>
       </div>
     </div>
   );

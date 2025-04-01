@@ -1,3 +1,6 @@
+// Components
+import { Link } from "react-router-dom";
+
 // Styling
 import "./Navigation.css";
 import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
@@ -8,8 +11,8 @@ import marvelBrand from "../../Utils/Images/marvel-logo-chromebook-wallpaper.jpg
 function Navigation() {
   return (
     <div className="navigation">
-      <Navbar expand="lg" id="navigation-bar">
-        <Container fluid>
+      <Navbar collapseOnSelect expand="lg" id="navigation-bar">
+        <Container>
           <Navbar.Brand href="/">
             <img
               className="marvel-brand"
@@ -20,13 +23,13 @@ function Navigation() {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto my-2 my-lg-0" navbarScroll>
-              <Nav.Link className="nav-text" href="#action1">
+              <Nav.Link className="nav-text" href="/heroes">
                 The Heroes
               </Nav.Link>
-              <Nav.Link className="nav-text" href="#action1">
+              <Nav.Link className="nav-text" href="/villains">
                 The Villains
               </Nav.Link>
-              <Nav.Link className="nav-text" href="#action2">
+              <Nav.Link className="nav-text" href="/characters/new-hero">
                 Add a Character
               </Nav.Link>
             </Nav>
