@@ -1,6 +1,10 @@
 // UTILS
 import { useParams, Link } from "react-router-dom";
 import { useGetCharactersByIdQuery } from "../../Utils/redux/service/marvelsData";
+import { useDeleteCharacterMutation } from "../../Utils/redux/service/marvelsData";
+
+// Componenets
+import { useNavigate } from "react-router-dom";
 
 // Styling
 import { Button, Card } from "react-bootstrap";
@@ -9,6 +13,20 @@ import "./CharacterInfo.css";
 const CharacterInfo = () => {
   const { id } = useParams();
   const character = useGetCharactersByIdQuery(id);
+  const [deleteCharacter, { data, error, isLoading }] =
+    useDeleteCharacterMutation();
+  const navigate = useNavigate();
+
+  const handleDelete = async () => {
+    try {
+      await deleteCharacter(id);
+      alert("Character Deleted");
+      navigate("/");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <div>
       <div className="single-character-container">
@@ -45,7 +63,9 @@ const CharacterInfo = () => {
         <Link to={`/characters/edit-form/${id}`}>
           <Button className="edit-button">Edit</Button>
         </Link>
-        <Button variant="danger">Delete</Button>
+        <Button variant="danger" onClick={handleDelete}>
+          Delete
+        </Button>
       </div>
     </div>
   );
