@@ -1,0 +1,37 @@
+.new-character-header {
+  text-align: center;
+}
+
+.new-form-container {
+  height: 85vh;
+  position: relative;
+  top: 98px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 20em;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.new-character-form {
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.367);
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-size: 19em 28em;
+  border-radius: 10px;
+  box-shadow: 5px 1px 1px rgba(0, 0, 0, 0.232);
+}
+
+.new-form-label {
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+  padding-top: 1px;
+}
+
+.new-form-button {
+  margin-top: 20px;
+  float: right;
+}
