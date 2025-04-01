@@ -2,9 +2,13 @@
 import { useParams } from "react-router-dom";
 import { useGetCharactersByIdQuery } from "../../Utils/redux/service/marvelsData";
 
+// Components
+import EditButton from "../editButton/EditButton";
+
 // Styling
 import { Card } from "react-bootstrap";
 import "./CharacterInfo.css";
+import DeleteButton from "../deleteButton/DeleteButton";
 
 const CharacterInfo = () => {
   const { id } = useParams();
@@ -40,6 +44,10 @@ const CharacterInfo = () => {
             </Card.Text>
           </Card.Body>
         </Card>
+      </div>
+      <div className="button-section">
+        <EditButton />
+        <DeleteButton />
       </div>
     </div>
   );
