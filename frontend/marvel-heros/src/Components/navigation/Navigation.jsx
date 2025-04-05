@@ -1,8 +1,6 @@
 // Components
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useGetAllCharactersQuery } from "../../Utils/redux/service/marvelsData";
-import Loading from "../loading/Loading";
 
 // Pages
 import SearchResults from "../searchResults/SearchResults";
