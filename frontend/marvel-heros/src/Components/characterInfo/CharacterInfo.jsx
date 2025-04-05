@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { useGetCharactersByIdQuery } from "../../Utils/redux/service/marvelsData";
 import { useDeleteCharacterMutation } from "../../Utils/redux/service/marvelsData";
 
-// Componenets
+// Components
 import { useNavigate } from "react-router-dom";
 
 // Styling
@@ -13,9 +13,12 @@ import "./CharacterInfo.css";
 const CharacterInfo = () => {
   const { id } = useParams();
   const character = useGetCharactersByIdQuery(id);
-  const [deleteCharacter, { data, error, isLoading }] =
-    useDeleteCharacterMutation();
+  const [deleteCharacter, { error, isLoading }] = useDeleteCharacterMutation();
   const navigate = useNavigate();
+
+  if (error) {
+    return null;
+  }
 
   const handleDelete = async () => {
     try {

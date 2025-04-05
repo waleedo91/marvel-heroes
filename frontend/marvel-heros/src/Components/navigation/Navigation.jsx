@@ -1,5 +1,11 @@
 // Components
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useGetAllCharactersQuery } from "../../Utils/redux/service/marvelsData";
+import Loading from "../loading/Loading";
+
+// Pages
+import SearchResults from "../searchResults/SearchResults";
 
 // Styling
 import "./Navigation.css";
@@ -9,6 +15,21 @@ import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
 import marvelBrand from "../../Utils/Images/marvel-logo-chromebook-wallpaper.jpg";
 
 function Navigation() {
+  const navigate = useNavigate();
+  const [searchInput, setSearchInput] = useState("");
+
+  const handleChange = (e) => {
+    setSearchInput(e.target.value);
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchInput.trim()) {
+      navigate(`/search?query=${encodeURIComponent(searchInput)}`);
+      setSearchInput("");
+    }
+  };
+
   return (
     <div className="navigation">
       <Navbar collapseOnSelect expand="lg" id="navigation-bar">
@@ -33,14 +54,16 @@ function Navigation() {
                 Add a Character
               </Nav.Link>
             </Nav>
-            <Form className="d-flex">
+            <Form className="d-flex" onSubmit={handleSearch}>
               <Form.Control
                 type="search"
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
+                value={searchInput}
+                onChange={handleChange}
               />
-              <Button>Search</Button>
+              <Button type="submit">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>

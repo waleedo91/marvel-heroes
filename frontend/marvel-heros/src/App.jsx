@@ -8,6 +8,7 @@ import Characters from "./Pages/characters/Characters";
 import CharacterPage from "./Pages/characterPage/CharacterPage";
 import AlignmentList from "./Pages/alignmentList/AlignmentList";
 import NewHero from "./Pages/newHero/NewHero";
+import SearchPage from "./Pages/searchPage/SearchPage";
 
 // Components
 import Navigation from "./Components/navigation/Navigation";
@@ -34,6 +35,7 @@ function App() {
         <Route path="/characters/new-hero" element={<NewHero />} />
         <Route path="/:alignment" element={<AlignmentList />} />
         <Route path="characters/edit-form/:id" element={<EditCharacter />} />
+        <Route path="/search" element={<SearchPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

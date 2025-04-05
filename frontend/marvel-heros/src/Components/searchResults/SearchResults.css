@@ -1,0 +1,16 @@
+.search-list-container {
+  position: relative;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-list-card {
+  flex-basis: 40%;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.search-list-image {
+  height: 20em;
+}
