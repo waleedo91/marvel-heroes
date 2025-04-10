@@ -1,17 +1,47 @@
+.all-list {
+  position: relative;
+  top: 60px;
+  text-align: center;
+}
+
 .character-list-container {
   position: relative;
-  padding-top: 125px;
+  padding-top: 70px;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .character-list-card {
   flex-basis: 40%;
   flex-grow: 1;
   text-align: center;
+  margin: 10px;
+  box-shadow: 5px 5px 10px red;
 }
 
 .character-list-image {
   width: 25%;
   height: 10em;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .character-list-container {
+    width: 75%;
+  }
+
+  .character-list-card {
+    flex-basis: 30%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .character-list-container {
+    width: 75%;
+  }
+
+  .character-list-card {
+    flex-basis: 30%;
+  }
 }

@@ -18,6 +18,7 @@ const CharacterList = () => {
 
   return (
     <>
+      <h1 className="all-list">All Characters</h1>
       {!isLoading ? (
         <div className="character-list-container">
           {data?.map((char) => (

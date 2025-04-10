@@ -11,7 +11,7 @@ const AlignmentList = () => {
   console.log(alignment);
 
   return (
-    <div className="character-list-container">
+    <div>
       {alignment === "heroes" ? <HeroesList /> : <VillainList />}
     </div>
   );

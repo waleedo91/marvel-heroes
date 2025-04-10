@@ -1,16 +1,7 @@
-.hero-list-container {
+.heroes-list {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.hero-list-card {
-  flex-basis: 50%;
-  flex-grow: 1;
+  top: 100px;
+  margin-bottom: 40px;
   text-align: center;
-}
-
-.hero-list-image {
-  width: 25%;
-  height: 10em;
+  font-family: "Bangers";
 }

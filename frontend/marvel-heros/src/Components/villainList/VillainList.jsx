@@ -18,17 +18,18 @@ const VillainList = () => {
 
   return (
     <div>
+      <h1 className="villains-list">The Villains</h1>
       {!isLoading ? (
-        <div className="villain-list-container">
+        <div className="character-list-container">
           {data?.map((char) =>
             char.alignment === "villain" ? (
-              <Card key={char.id} className="villain-list-card">
+              <Card key={char.id} className="character-list-card">
                 <Link to={`/characters/${char.id}`}>
                   <Card.Img
                     variant="top"
                     src={char.image_url}
                     alt={char.name}
-                    className="villain-list-image"
+                    className="character-list-image"
                   />
                   <Card.Body>
                     <Card.Title>{char.name}</Card.Title>

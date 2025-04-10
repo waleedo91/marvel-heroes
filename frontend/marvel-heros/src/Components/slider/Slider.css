@@ -9,7 +9,6 @@
   margin: 0 auto;
   padding-top: 130px;
   padding-bottom: 5px;
-  
 }
 
 .slide-text {
@@ -19,6 +18,11 @@
 }
 
 .slider-container {
- 
   padding-bottom: 10px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .carousel {
+    padding-top: 90px;
+  }
 }

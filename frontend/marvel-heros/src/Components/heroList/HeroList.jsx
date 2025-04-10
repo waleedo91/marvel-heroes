@@ -18,17 +18,18 @@ const HeroList = () => {
 
   return (
     <div>
+      <h1 className="heroes-list">Earth's Mightiest</h1>
       {!isLoading ? (
-        <div className="hero-list-container">
+        <div className="character-list-container">
           {data?.map((char) =>
             char.alignment === "hero" ? (
-              <Card key={char.id} className="hero-list-card">
+              <Card key={char.id} className="character-list-card">
                 <Link to={`/characters/${char.id}`}>
                   <Card.Img
                     variant="top"
                     src={char.image_url}
                     alt={char.name}
-                    className="hero-list-image"
+                    className="character-list-image"
                   />
                   <Card.Body>
                     <Card.Title>{char.name}</Card.Title>
